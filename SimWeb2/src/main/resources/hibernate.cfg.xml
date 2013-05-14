@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory name="session">
+        
+        <!--CONFIGURAÇÕES DE CONEXÃO COM O BANCO-->
+        <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property><!--Define o drive de conexão-->
+        <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/sim?createDatabaseIfNotExist=true</property>
+        <property name="hibernate.connection.username">root</property>
+        <property name="hibernate.connection.password">1234</property>
+        
+        
+        <!-- configurando o debug -->   
+        <property name="hibernate.show_sql">true</property>
+        <property name="hibernate.format_sql">true</property>
+        <property name="hibernate.generate_statistics">true</property>
+        <property name="hibernate.use_sql_comments">true</property>
+        
+        <!-- Usando as configurações do c3p0 para pool de conexões -->
+        <property name="hibernate.c3p0.max_size">20</property>
+        <property name="hibernate.c3p0.min_size">1</property>
+        <property name="hibernate.c3p0.timeout">300</property>
+        <property name="hibernate.c3p0.max_statements">80</property>
+        <property name="hibernate.c3p0.idle_test_period">300</property>
+        
+        
+        <!--LISTA DE ENTIDADES-->
+        <mapping class="br.com.simweb2.model.entities.Agentesaude" />
+        <mapping class="br.com.simweb2.model.entities.Atendente" />
+        <mapping class="br.com.simweb2.model.entities.Cidade" />
+        <mapping class="br.com.simweb2.model.entities.Enfermeiro" />
+        <mapping class="br.com.simweb2.model.entities.Estado" />
+        <mapping class="br.com.simweb2.model.entities.Gestorunidade" />
+        <mapping class="br.com.simweb2.model.entities.Paciente" />
+        <mapping class="br.com.simweb2.model.entities.Pessoa" />
+        <mapping class="br.com.simweb2.model.entities.Unidade" />
+        
+    
+    </session-factory>
+</hibernate-configuration>
