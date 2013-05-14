@@ -21,13 +21,15 @@ public class Cidade implements Serializable{
      @Column(name="idCidade" , nullable=true)     
      private Integer idCidade;
      
-     @ManyToOne(fetch = FetchType.EAGER)
-     @JoinColumn(name="ESTADO_idESTADO")
+     @ManyToOne(fetch = FetchType.LAZY)
+     @ForeignKey(name="EstadoCidade")
+     @JoinColumn(name="ESTADO_idESTADO")     
      private Estado estados;
      
      
-     // Mapeando Cidade contem Pessoa
+     // Mapeando Cidade contem Pessoas
      @OneToMany(mappedBy="cidade", fetch= FetchType.LAZY)
+     @ForeignKey(name="PessoaCidade")
      private List<Pessoa> pessoas;
      
      private String nome;
@@ -39,6 +41,7 @@ public class Cidade implements Serializable{
 
      
     public Cidade() {
+        this.estados =  new Estado();
     }
 
     public Integer getIdCidade() {

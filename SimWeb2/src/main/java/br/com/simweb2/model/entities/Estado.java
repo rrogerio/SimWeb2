@@ -1,7 +1,9 @@
 package br.com.simweb2.model.entities;
 // Generated 23/02/2013
 
+import java.util.List;
 import javax.persistence.*;
+import org.hibernate.annotations.ForeignKey;
 
 
 
@@ -20,15 +22,15 @@ public class Estado implements java.io.Serializable {
     @Id
     @GeneratedValue
     @Column(name="idEstado")
-    private Integer idEstado;
-    
-    
+    private Integer idEstado;   
     @Column(name="nome")
-    private String nome;
-    
+    private String nome;   
     @Column(name="uf")
     private String uf;
-   
+    
+    @OneToMany(mappedBy="estado", fetch= FetchType.LAZY)
+    @ForeignKey(name="EstadoCidade")
+    private List<Cidade> cidades;   
 
     public Estado() {
     }
