@@ -2,28 +2,107 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:ui="http://java.sun.com/jsf/facelets"
-      xmlns:h="http://java.sun.com/jsf/html">
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
 
     <h:head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-        <link href="./css/default.css" rel="stylesheet" type="text/css" />
-        <link href="./css/cssLayout.css" rel="stylesheet" type="text/css" />
+        <link href="${facesContext.externalContext.requestContextPath}/resources/restrito/css/StylePrincipal.css" rel="stylesheet" type="text/css" />
+        <link href="${facesContext.externalContext.requestContextPath}/resources/restrito/css/default.css" rel="stylesheet" type="text/css" />
+        <link href="${facesContext.externalContext.requestContextPath}/resources/restrito/css/StilosIcones.css" rel="stylesheet" type="text/css" />
         <title>Facelets Template</title>
     </h:head>
 
     <h:body>
-
+        <h:form></h:form>
+        
         <div id="top">
-            <ui:insert name="top">Top</ui:insert>
+                    
+                        <ui:insert name="titulo">SISTEMA DE IMUNIZAÇÃO MUNICIPAL</ui:insert>
+                  
         </div>
 
-        <div id="content" class="center_content">
-            <ui:insert name="content">Content</ui:insert>
-        </div>
+        <div id="menu">
+                    <ui:insert name="menu">
+                        <h:form>
+                            <p:menubar id="menu" autoDisplay="false">
+                                
+                                <p:menuitem value="INICIO" url="/index.jsf"  style="width: 100px" icon="ui-icon-home"/>
+                          
+                              
+                                <p:submenu label="CADASTRO" style="width: 150px;" icon="ui-icon-document" >
+                                    
+                                    <p:menuitem value="Cidadão" url="/rtr/Paciente/Paciente.jsf"  />
+                                    <p:separator />
+                                    <p:menuitem value="Agente de Saude" url="/rtr/Agente/Agente.jsf" />
+                                    <p:menuitem value="Atendente" url="/rtr/Atendente/Atendente.jsf" />
+                                    <p:menuitem value="Administrador" url="/rtr/Gestor/GestorUnidade.jsf" />
+                                    
+                                    
+                                    <p:menuitem value="Enfermeiro" url="/rtr/Enfermeiro/Enfermeiro.jsf" />
+                                    
+                                    <p:separator />
+                                    <p:menuitem value="Unidade" url="/rtr/Unidade/Unidade.jsf" />
+                                    
+                                    <p:separator />
+                                    <p:menuitem value="Vacina" url="/rtr/Vacina/Vacina.jsf" />
+                                    <p:menuitem value="Campanha" url="/rtr/Campanha/Campanha.jsf" />
+                                    
+                                    <p:separator />
+                                    <p:menuitem value="Cidade" url="/rtr/Cidade/Cidade.jsf"/>
+                                </p:submenu>      
+                                
+                                <p:submenu label="VACINAÇÃO" style="width: 150px;"  icon="ui-icon-refresh">
+                                    <p:menuitem value="Efetuar Vacina" url="#"  style="width: 150px" icon="ui-icon-arrowrefresh-1-w"/>
+                                    <p:menuitem value="Comprovante" url="#"  style="width: 150px" icon="ui-icon-search"/>
+                                    <p:menuitem value="Demostrativo" url="#" style="width: 150px" icon="ui-icon-document"/>
+                                                                    
+                                </p:submenu>
+                                
+                                 <!--<p:submenu label="ESTOQUE" style="width: 150px;" icon="ui-icon-gear">
+                                    <p:menuitem value="+ Vacina" url="#"  style="width: 150px"/>
+                                    <p:menuitem value="Estoque" url="#" style="width: 150px" icon="ui-icon-search"/>
+                                                                    
+                                </p:submenu>-->
+                                
+                                <p:submenu label="USUARIO" style="width: 150px;" icon="ui-icon-gear">
+                                    <p:menuitem value="Habilitar Usuario" url="/rtr/Usuarios/Usuario.jsf"  />                                    
+                                    <p:menuitem value="Perfil Usuario" url="#"  />
+                                                                    
+                                </p:submenu>
+                                
+                                
+                                    <p:menuitem value="Sair" url="#"  style="width: 100px" icon="ui-icon-close"/>
+                          
+                                                                    
+                                                       
+                                
+                            </p:menubar>
+                        </h:form>
+                        
+ 
+                         
+                    </ui:insert> 
+                    
+                </div>
 
-        <div id="bottom">
-            <ui:insert name="bottom">Bottom</ui:insert>
-        </div>
+                <!-- Fim da barra de menu-->
+
+                <div id="corpo">
+                          <ui:insert name="corpo" >INICIO  INICIO  INICIO  INICIO</ui:insert>
+
+
+                      </div>
+
+                      <div class="clear">
+                      </div>
+
+                      <div id="rodape">
+                          <ui:insert name="rodape">
+                              © Copyright 2013. - Todos direitos reservados Rogerio Almeida
+                          </ui:insert>
+                      </div>
+
 
     </h:body>
 

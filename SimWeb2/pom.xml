@@ -224,7 +224,19 @@
             <artifactId>south-street</artifactId>  
             <version>${themes.version}</version> 
         </dependency>
-
+        
+        <dependency>  
+            <groupId>org.primefaces.themes</groupId>  
+            <artifactId>bluesky</artifactId>  
+            <version>${themes.version}</version> 
+        </dependency>
+        
+        <dependency>  
+            <groupId>org.primefaces.themes</groupId>  
+            <artifactId>home</artifactId>  
+            <version>${themes.version}</version> 
+        </dependency>
+        
         <!-- SLF4J -->
         <dependency>
             <groupId>org.slf4j</groupId>

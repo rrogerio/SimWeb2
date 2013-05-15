@@ -15,8 +15,8 @@ public class PhaseListenerSimWeb2 implements PhaseListener{
     //Antes da Fase
     @Override
     public void beforePhase(PhaseEvent fase) {
-        if (fase.getPhaseId().equals(PhaseId.RESTORE_VIEW)) {            
-            System.out.println("Rogerio estou Antes da Fase: "+getPhaseId());
+        System.out.println("Rogerio estou Antes da Fase: "+fase.getPhaseId());
+        if (fase.getPhaseId().equals(PhaseId.RESTORE_VIEW)) {         
             Session session = HibernateUtil.getSessionfactory().openSession();
             session.beginTransaction();
             FacesContextUtil.setRequestSession(session);
@@ -27,7 +27,7 @@ public class PhaseListenerSimWeb2 implements PhaseListener{
     @Override
     public void afterPhase(PhaseEvent fase) {
         
-        System.out.println("Rogerio estou Depois da Fase: "+getPhaseId());
+        System.out.println("Rogerio estou Depois da Fase: "+fase.getPhaseId());
         if (fase.getPhaseId().equals(PhaseId.RENDER_RESPONSE)) {
             Session session = FacesContextUtil.geRequestSession();
             try {

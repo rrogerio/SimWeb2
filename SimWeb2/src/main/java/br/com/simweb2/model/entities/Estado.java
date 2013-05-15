@@ -28,7 +28,7 @@ public class Estado implements java.io.Serializable {
     @Column(name="uf")
     private String uf;
     
-    @OneToMany(mappedBy="estado", fetch= FetchType.LAZY)
+    @OneToMany(fetch= FetchType.LAZY)
     @ForeignKey(name="EstadoCidade")
     private List<Cidade> cidades;   
 

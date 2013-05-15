@@ -1,0 +1,94 @@
+/* 
+    Document   : StilosIcones
+    Created on : 18/02/2013, 04:40:39
+    Author     : 2r.rogerio
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+.ui-state-default .icon-salvar{
+    background-image: url(../img/salvar.png);
+    width: 100%;
+    height: 100%;
+
+
+}
+
+.ui-state-default .icon-ok{
+    background-image: url(../img/ok.png);
+    width: 100%;
+    height: 100%;
+
+
+}
+
+.ui-state-default .icon-consultar{
+    background-image: url(../img/consultar.png);
+    width: 100%;
+    height: 100%;
+    top: 10px;
+    left: 10px;
+
+
+}
+
+.ui-state-default .icon-vacina{
+    background-image: url(../img/vacina.png);
+    width: 100%;
+    height: 100%;
+    top: 10px;
+    left: 10px;
+}
+
+.ui-state-default .icon-cancelar{
+    background-image: url(../img/cancel.png);
+    width: 100%;
+    height: 100%;
+
+
+}
+
+.ui-state-default .icon-editar{
+    background-image: url(../img/editar.png);
+    
+
+}
+.ui-state-default .icon-deletar{
+    background-image: url(../img/excluir.png);
+    width: 100%;
+    height: 100%;
+    top: 10px;
+    left: 11px;
+    
+
+}
+
+.ui-state-default .icon-senha{
+    background-image: url(../img/senha.png);
+    width: 100%;
+    height: 100%;
+    top: 10px;
+    left: 11px;
+    
+
+}
+.ui-state-default .icon-novo{
+    background-image: url(../img/novo.png);
+    width: 100%;
+    height: 100%;
+    
+    top: 9px;
+    left: 3px;
+}
+
+.ui-state-default .icon-unidade{
+    background-image: url(../img/unidade.png);
+    
+    width: 100%;
+    height: 100%;
+    
+    top: 9px;
+    left: 3px;
+}
+
+
